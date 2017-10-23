@@ -1,0 +1,139 @@
+.lf{
+    float:left;
+}
+.rt{
+    float:right;
+}
+ul,ul li{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+body{
+    background:#242727;
+    font-family: Consolas, monaco, monospace;
+
+}
+#container{
+    width:60vw;
+    height:60vh;
+    margin-left:10vw ;
+    margin-top: 20vh;
+}
+#img{
+    width: 50%;
+    height:100%;
+    background: url("../img/home-image.jpg") no-repeat;
+    background-size:cover;
+}
+#introduce{
+    width: 50%;
+    height:100%;
+    background: #fff;
+}
+#welcome{
+    margin-top:15%;
+    margin-left:8%;
+    padding:1% 8%;
+    border-left:2px solid #000000 ;
+    font-size: 26px;
+    font-weight: bold;
+}
+#btn{
+    border:1px solid #000000;
+    width: 100px;
+    height:40px;
+    margin:8% 12%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-weight: 200;
+}
+#btn:hover {
+    border-color: #F78B26; /* Green */
+    color:#F78B26;
+}
+#menu{
+    margin-right:8vw ;
+    margin-top: 24vh;
+}
+.myResume{
+    margin-top:8vh;
+}
+.myResume li{
+    background:#fff;
+    margin:3vh auto;
+    width:180px;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor:pointer;
+    transform: translateZ(0);
+    transition-property: color;
+    transition-duration: 0.3s;
+    text-decoration: none;
+}
+.myResume li:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom right ,red, yellow);
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    text-decoration: none;
+}
+
+.myResume li:hover:before {
+    transform: scaleX(1);
+}
+
+@media screen and (max-width:625px) {
+    #container{
+        width:100vw;
+        height:100vh;
+        margin:20vh auto;
+        margin-bottom: 0;
+    }
+    #introduce{
+        width:90vw;
+        height:40vh;
+        margin:0 5vw;
+    }
+    #welcome{
+        margin-top:10%;
+    }
+    #btn{
+        margin:0 12%;
+    }
+    #img {
+        width: 90vw;
+        height:50vh;
+        margin: 0 5vw;
+    }
+    #menu{
+        margin-top:2vh;
+        width:90vw;
+        height:60vh;
+        margin:0 5vw;
+    }
+    #logo{
+        position: fixed;
+        top:0;
+        left:23vw;
+        margin:3vh auto;
+    }
+    .myResume{
+        margin-top:0;
+    }
+}
